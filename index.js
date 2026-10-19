@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
     
     pool.query('SELECT * FROM biodata ORDER BY id')
     .then(result => {
-        res.send(resu.rows);
+        res.send(result.rows);
     })
     .catch(err => {
         console.error(err);
